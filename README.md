@@ -27,12 +27,14 @@ Enter ESP32_Debug! By just adding one simple include to your code, you can now p
 ```cpp
 #include "ESP32_Debug.h"
 
-void setup() {
+ESP32_Debug* debug;
 
+void setup() {
+  debug = new ESP32_Debug();
 }
 
 void loop() {
-  ESP32Debug.println("Hello World!");
+  debug->serial->println("Hello World!");
 }
 ```
 
