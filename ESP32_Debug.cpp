@@ -4,21 +4,18 @@
 ESP32_Debug::ESP32_Debug(){
     this->serial = &Serial2;
     this->serial->begin(BAUDRATE_DEFAULT, SERIAL_8N1, RXD2, TXD2);
-    this = &Serial2;
     // initialized = true;
 }
 
 ESP32_Debug::ESP32_Debug(int baudRate){
     this->serial = &Serial2;
     this->serial->begin(baudRate, SERIAL_8N1, RXD2, TXD2);
-    this = &Serial2;
     // initialized = true;
 }
 
 ESP32_Debug::ESP32_Debug(int baudRate, int RX, int TX){
     this->serial = &Serial2;
     this->serial->begin(baudRate, SERIAL_8N1, RX, TX);
-    this = &Serial2;
     // initialized = true;
 }
 
